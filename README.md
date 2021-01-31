@@ -55,9 +55,12 @@ netstat -tulpn                          # tcp/udp listening connections
 
 ```
 nslookup <host> [server] -type=value
+
 nslookup google.com
 nslookup google.com 8.8.8.8
-nslookup google.com 8.8.8.8 -type=NS
+nslookup -type=NS google.com 8.8.8.8    # A, AAAA, CNAME, NS, MX
+
+nslookup <IP>                           # reverse lookup
 ```
 
 ## TEXT PROCESSING
