@@ -1,22 +1,38 @@
 # SEARCH
 
 ```
-grep -n ^#                 # lists index
-grep -n ^- man             # lists apropos commands
+grep -n ^- README.md             # lists apropos
+grep -n ^# README.md             # lists index
 ```
+
+--------------------------------------------------------------------------------
 
 # APROPOS
 
-- netstat: Print network connections, routing tables, interface statistics, 
+- *arp*: manipulate the system ARP cache.
+- *grep*: print lines that match patterns.
+- *ip*: show / manipulate routing, network devices, interfaces and tunnels.
+- *netstat*: print network connections, routing tables, interface statistics, 
            masquerade connections, and multicast memberships.
-- ip: show / manipulate routing, network devices, interfaces and tunnels.
-- arp: manipulate the system ARP cache.
 
 --------------------------------------------------------------------------------
 
 # MAN
 
 ## NETWORKING
+
+### ARP
+
+```
+arp                                     # ARP table
+arp -n
+```
+
+### IP
+
+```
+ip route                                # routing table
+```
 
 ### NETSTAT
 
@@ -26,15 +42,14 @@ netstat -i                              # interface table
 netstat -tulpn                          # tcp/udp listening connections 
 ```
 
-### IP
+## TEXT PROCESSING
+
+### GREP
 
 ```
-ip route                                # routing table
-```
-
-### ARP
-
-```
-arp                                     # ARP table
-arp -n
+grep <regex> file
+    -n  show line number
+    -i  ignore case
+    -v  inverse match
+    -o  only match
 ```
