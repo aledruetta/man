@@ -10,6 +10,7 @@ grep -n ^# README.md             # lists index
 # APROPOS
 
 - **arp**: manipulate the system ARP cache.
+- **dig**: DNS lookup utility.
 - **grep**: print lines that match patterns.
 - **ip**: show / manipulate routing, network devices, interfaces and tunnels.
 - **netstat**: print network connections, routing tables, interface statistics, 
@@ -35,6 +36,16 @@ arp                                     # ARP table
 arp -n
 ```
 
+### DIG
+
+```
+dig [@server] <domain> [type]
+
+dig steam.com
+dig @8.8.8.8 steam.com ns
+dig @8.8.8.8 steam.com any +short
+```
+
 ### IP
 
 ```
@@ -58,7 +69,7 @@ nslookup <host> [server] -type=value
 
 nslookup google.com
 nslookup google.com 8.8.8.8
-nslookup -type=NS google.com 8.8.8.8    # A, AAAA, CNAME, NS, MX
+nslookup -type=NS google.com 8.8.8.8    # A, AAAA, CNAME, NS, MX, ANY
 
 nslookup <IP>                           # reverse lookup
 ```
