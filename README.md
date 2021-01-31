@@ -9,10 +9,10 @@ grep -n ^# README.md             # lists index
 
 # APROPOS
 
-- *arp*: manipulate the system ARP cache.
-- *grep*: print lines that match patterns.
-- *ip*: show / manipulate routing, network devices, interfaces and tunnels.
-- *netstat*: print network connections, routing tables, interface statistics, 
+- **arp**: manipulate the system ARP cache.
+- **grep**: print lines that match patterns.
+- **ip**: show / manipulate routing, network devices, interfaces and tunnels.
+- **netstat**: print network connections, routing tables, interface statistics, 
            masquerade connections, and multicast memberships.
 
 --------------------------------------------------------------------------------
