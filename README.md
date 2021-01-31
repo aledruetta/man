@@ -13,13 +13,20 @@ grep -n ^# README.md             # lists index
 - **grep**: print lines that match patterns.
 - **ip**: show / manipulate routing, network devices, interfaces and tunnels.
 - **netstat**: print network connections, routing tables, interface statistics, 
-           masquerade connections, and multicast memberships.
+  masquerade connections, and multicast memberships.
+- **nslookup**: query Internet name servers interactively.
 
 --------------------------------------------------------------------------------
 
 # MAN
 
 ## NETWORKING
+
+### FILES
+
+```
+/etc/resolv.conf
+```
 
 ### ARP
 
@@ -31,7 +38,9 @@ arp -n
 ### IP
 
 ```
+ip a                                    # all
 ip route                                # routing table
+ip link                                 # MAC addresses
 ```
 
 ### NETSTAT
@@ -40,6 +49,15 @@ ip route                                # routing table
 netstat -rn                             # routing table
 netstat -i                              # interface table
 netstat -tulpn                          # tcp/udp listening connections 
+```
+
+### NSLOOKUP
+
+```
+nslookup <host> [server] -type=value
+nslookup google.com
+nslookup google.com 8.8.8.8
+nslookup google.com 8.8.8.8 -type=NS
 ```
 
 ## TEXT PROCESSING
