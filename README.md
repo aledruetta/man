@@ -7,18 +7,6 @@ grep -n ^# README.md             # lists index
 
 --------------------------------------------------------------------------------
 
-# APROPOS
-
-- **arp**: manipulate the system ARP cache.
-- **dig**: DNS lookup utility.
-- **grep**: print lines that match patterns.
-- **ip**: show / manipulate routing, network devices, interfaces and tunnels.
-- **netstat**: print network connections, routing tables, interface statistics, 
-  masquerade connections, and multicast memberships.
-- **nslookup**: query Internet name servers interactively.
-
---------------------------------------------------------------------------------
-
 # MAN
 
 ## NETWORKING
@@ -29,14 +17,14 @@ grep -n ^# README.md             # lists index
 /etc/resolv.conf
 ```
 
-### ARP
+### ARP - manipulate the system ARP cache
 
 ```
 arp                                     # ARP table
 arp -n
 ```
 
-### DIG
+### DIG - DNS lookup utility
 
 ```
 dig [@server] <domain> [type]
@@ -46,7 +34,7 @@ dig @8.8.8.8 steam.com ns
 dig @8.8.8.8 steam.com any +short
 ```
 
-### IP
+### IP - show / manipulate routing, network devices, interfaces and tunnels
 
 ```
 ip a                                    # all
@@ -54,7 +42,7 @@ ip route                                # routing table
 ip link                                 # MAC addresses
 ```
 
-### NETSTAT
+### NETSTAT - print network connections, routing tables, interface statistics masquerade connections, and multicast memberships
 
 ```
 netstat -rn                             # routing table
@@ -62,7 +50,7 @@ netstat -i                              # interface table
 netstat -tulpn                          # tcp/udp listening connections 
 ```
 
-### NSLOOKUP
+### NSLOOKUP - query Internet name servers interactively
 
 ```
 nslookup <host> [server] -type=value
@@ -76,7 +64,7 @@ nslookup <IP>                           # reverse lookup
 
 ## TEXT PROCESSING
 
-### GREP
+### GREP - print lines that match patterns
 
 ```
 grep <regex> file
