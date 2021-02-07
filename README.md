@@ -47,16 +47,16 @@ ip l                                    # link (MAC addresses)
 
 ```
 netstat -rn                             # routing table
-netstat -i                              # interface table
-netstat -tulpn                          # tcp/udp listening connections 
+        -i                              # interface table
+        -tulpn                          # tcp/udp listening connections 
 ```
 
 ### NMAP - Network exploration tool and security / port scanner
 
 ```
-nmap -sn <network/submask>
+sudo nmap -sn <network/submask>
 
-nmap -sn 192.168.0.0/24
+sudo nmap -sn 192.168.0.0/24
 ```
 
 ### NSLOOKUP - query Internet name servers interactively
@@ -75,10 +75,10 @@ nslookup <IP>                           # reverse lookup
 
 ```
 systemd-resolve -t <TYPE> [hostname|address]          # DNS lookup
-systemd-resolve --status
-systemd-resolve --statistics
-systemd-resolve --reset-statistics
-systemd-resolve --flush-caches
+                --status
+                --statistics
+                --reset-statistics
+                --flush-caches
 ```
 
 ### TELNET - user interface to the TELNET protocol
@@ -87,6 +87,20 @@ systemd-resolve --flush-caches
 telnet <host> <port>
 
 Ctr+] and ´quit´ for exit
+```
+
+### UFW - program for managing a netfilter firewall
+
+```
+sudo ufw status
+         status verbose
+         app list
+         allow <port>
+         allow <in|out> from <IP/submask> to any port <port> proto <protocol>
+         status numbered
+         delete <rule number>
+         enable
+         disable
 ```
 
 ## TEXT PROCESSING
