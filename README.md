@@ -43,6 +43,17 @@ ip r                                    # route (routing table)
 ip l                                    # link (MAC addresses)
 ```
 
+### NC (NETCAT) - arbitrary TCP and UDP connections and listens
+
+```
+nc -vz <host> <port>                    # verbose and only scan listening
+nc -vz <host> <port-range>
+nc -l <port>                            # create a connection
+
+nc -l 5000                              # create a connection as a server
+nc localhost 5000                       # create a connection as a client
+```
+
 ### NETSTAT - print network connections, routing tables, interface statistics masquerade connections, and multicast memberships
 
 ```
