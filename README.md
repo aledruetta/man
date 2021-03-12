@@ -35,6 +35,12 @@ dig NS steam.com @8.8.8.8
 dig ANY steam.com @8.8.8.8 +short
 ```
 
+### FILE - determine file type
+
+```
+file <filename>
+```
+
 ### IP - show / manipulate routing, network devices, interfaces and tunnels
 
 ```
@@ -46,8 +52,8 @@ ip l                                    # link (MAC addresses)
 ### NC (NETCAT) - arbitrary TCP and UDP connections and listens
 
 ```
-nc -vz <host> <port>                    # verbose and only scan listening
-nc -vz <host> <port-range>
+nc -4 -vz <host> <port>                 # verbose and only scan listening IPv4
+nc -6 -vz <host> <port-range>
 nc -l <port>                            # create a connection
 
 nc -l 5000                              # create a connection as a server
@@ -80,6 +86,23 @@ nslookup google.com 8.8.8.8
 nslookup -type=NS google.com 8.8.8.8    # A, AAAA, CNAME, NS, MX, ANY
 
 nslookup <IP>                           # reverse lookup
+```
+
+### SS - another utility to investigate sockets
+
+```
+ss -[4|6] -[tux]ln
+
+ss -4 -tln                              # stream-socket listening IPv4
+ss -6 -uln                              # datagram-socket listening IPv6
+ss -xln                                 # unix-socket
+
+```
+
+### STAT - display file or file system status
+
+```
+stat <filename>
 ```
 
 ### SYSTEMD-RESOLVE - Network Name Resolution manager
