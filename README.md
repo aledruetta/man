@@ -1,5 +1,4 @@
-# HELP
-
+# HELP 
 ```
 grep -n ^# README.md             # lists topics
 less +<line number> README.md    # read topic
@@ -8,8 +7,6 @@ less +<line number> README.md    # read topic
 --------------------------------------------------------------------------------
 
 # MAN
-
-## NETWORKING
 
 ### FILES
 
@@ -23,6 +20,12 @@ less +<line number> README.md    # read topic
 ```
 arp                                     # ARP table
 arp -n
+```
+
+### CURL - transfer a URL
+
+```
+curl ifconfig.me			# Get your public IP address
 ```
 
 ### DIG - DNS lookup utility
