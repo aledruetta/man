@@ -38,6 +38,12 @@ dig NS steam.com @8.8.8.8
 dig ANY steam.com @8.8.8.8 +short
 ```
 
+### FAST - Test your download and upload speed using fast.com
+
+```
+fast -u
+```
+
 ### FILE - determine file type
 
 ```
