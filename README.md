@@ -15,14 +15,14 @@ less +<line number> README.md    # read topic
 /etc/resolv.conf
 ```
 
-### ARP - manipulate the system ARP cache
+### ARP - Manipulate the system ARP cache
 
 ```
 arp                                     # ARP table
 arp -n
 ```
 
-### CURL - transfer a URL
+### CURL - Transfer a URL
 
 ```
 curl ifconfig.me			# Get your public IP address
@@ -44,13 +44,19 @@ dig ANY steam.com @8.8.8.8 +short
 fast -u
 ```
 
-### FILE - determine file type
+### FILE - Determine file type
 
 ```
 file <filename>
 ```
 
-### IP - show / manipulate routing, network devices, interfaces and tunnels
+### IFTOP - Display bandwidth usage on an interface by host
+ 
+```
+sudo iftop -i <interface>
+```
+
+### IP - Show / manipulate routing, network devices, interfaces and tunnels
 
 ```
 ip a                                    # all
@@ -58,7 +64,7 @@ ip r                                    # route (routing table)
 ip l                                    # link (MAC addresses)
 ```
 
-### NC (NETCAT) - arbitrary TCP and UDP connections and listens
+### NC (NETCAT) - Arbitrary TCP and UDP connections and listens
 
 ```
 nc -4 -vz <host> <port>                 # verbose and only scan listening IPv4
@@ -69,7 +75,7 @@ nc -l 5000                              # create a connection as a server
 nc localhost 5000                       # create a connection as a client
 ```
 
-### NETSTAT - print network connections, routing tables, interface statistics masquerade connections, and multicast memberships
+### NETSTAT - Print network connections, routing tables, interface statistics masquerade connections, and multicast memberships
 
 ```
 netstat -rn                             # routing table
@@ -85,7 +91,7 @@ sudo nmap -sn <network/submask>
 sudo nmap -sn 192.168.0.0/24
 ```
 
-### NSLOOKUP - query Internet name servers interactively
+### NSLOOKUP - Query Internet name servers interactively
 
 ```
 nslookup -type=TYPE <hostname> [server]
@@ -97,7 +103,7 @@ nslookup -type=NS google.com 8.8.8.8    # A, AAAA, CNAME, NS, MX, ANY
 nslookup <IP>                           # reverse lookup
 ```
 
-### SS - another utility to investigate sockets
+### SS - Another utility to investigate sockets
 
 ```
 ss -[4|6] -[tux]ln
@@ -108,7 +114,7 @@ ss -xln                                 # unix-socket
 
 ```
 
-### STAT - display file or file system status
+### STAT - Display file or file system status
 
 ```
 stat <filename>
@@ -124,7 +130,7 @@ systemd-resolve -t <TYPE> [hostname|address]          # DNS lookup
                 --flush-caches
 ```
 
-### TELNET - user interface to the TELNET protocol
+### TELNET - User interface to the TELNET protocol
 
 ```
 telnet <host> <port>
@@ -132,7 +138,7 @@ telnet <host> <port>
 Ctr+] and ´quit´ for exit
 ```
 
-### UFW - program for managing a netfilter firewall
+### UFW - Program for managing a netfilter firewall
 
 ```
 sudo ufw status
@@ -148,7 +154,7 @@ sudo ufw status
 
 ## TEXT PROCESSING
 
-### GREP - print lines that match patterns
+### GREP - Print lines that match patterns
 
 ```
 grep <regex> file
