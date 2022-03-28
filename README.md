@@ -63,6 +63,8 @@ sudo iftop -i <interface>
 ip a                                    # all
 ip r                                    # route (routing table)
 ip l                                    # link (MAC addresses)
+ip -l link				# statistics
+ip -s link show wlp0s2			
 ```
 
 ### NC (NETCAT) - Arbitrary TCP and UDP connections and listens
@@ -82,6 +84,9 @@ nc localhost 5000                       # create a connection as a client
 netstat -rn                             # routing table
         -i                              # interface table
         -tulpn                          # tcp/udp listening connections 
+	-s				# statistics
+	-st				# statistics TCP
+	-su				# statistics UDP
 ```
 
 ### NMAP - Network exploration tool and security / port scanner
@@ -129,6 +134,13 @@ systemd-resolve -t <TYPE> [hostname|address]          # DNS lookup
                 --statistics
                 --reset-statistics
                 --flush-caches
+```
+
+### TCPDUMP - Dump traffic on a network
+
+```
+sudo tcpdump
+sudo tcpdump -i wlp0s2
 ```
 
 ### TELNET - User interface to the TELNET protocol
