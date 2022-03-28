@@ -41,6 +41,7 @@ dig ANY steam.com @8.8.8.8 +short
 ### FAST - Test your download and upload speed using fast.com
 
 ```
+npm install --global fast-cli
 fast -u
 ```
 
